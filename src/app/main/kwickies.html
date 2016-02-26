@@ -1,0 +1,55 @@
+<div class="container">
+
+  <div>
+    <nav class="top-bar row">
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <a>Kwickies</a>
+          </h1>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <br>
+  <div class="row">
+
+  <div class="large-2 columns">
+    <ul class="side-nav">
+      <li><a href="#/">Sessions</a></li>
+      <li><a href="#/members">Members</a></li>
+      <li><a href="#/kwickies">Kwickies</a></li>
+      <li><a href="#/brands">Brands</a></li>
+    </ul>
+  </div>
+
+  <div class="large-10 columns">
+
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th>Question ID</th>
+            <th>Answer ID</th>
+            <th>Kwickie Video ID</th>
+            <th>Publish Date</th>
+            <th>Created Date</th>
+            <th>Status</th>
+            <th>Featured</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="kwickies in kwickies">
+            <td>{{kwickies.name}}</td>
+            <td>{{topics.members[0].firstName}} {{topics.members[0].lastName}}</td>
+            <td>{{topics.text}}</td>
+            <td>{{topics.endDate | limitTo: 10}}</td>
+            <td>{{topics.featured}}</td>
+            <td>{{kwickies.name}}</td>
+            <td>{{kwickies.featured}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

@@ -5,7 +5,7 @@
       <ul class="title-area">
         <li class="name">
           <h1>
-            <a>Sessions</a>
+            <a>Brands</a>
           </h1>
         </li>
       </ul>
@@ -14,16 +14,16 @@
   <br>
   <div class="row">
 
-    <div class="large-2 columns">
-      <ul class="side-nav">
-        <li><a href="#/">Sessions</a></li>
-        <li><a href="#/members">Members</a></li>
-        <li><a href="#/kwickies">Kwickies</a></li>
-        <li><a href="#/brands">Brands</a></li>
-      </ul>
-    </div>
+  <div class="large-2 columns">
+    <ul class="side-nav">
+      <li><a href="#/">Sessions</a></li>
+      <li><a href="#/members">Members</a></li>
+      <li><a href="#/kwickies">Kwickies</a></li>
+      <li><a href="#/brands">Brands</a></li>
+    </ul>
+  </div>
 
-    <div class="large-10 columns">
+  <div class="large-10 columns">
 
       <table style="width: 100%;">
         <thead>
@@ -37,7 +37,7 @@
         </thead>
         <tbody>
           <tr ng-repeat="topics in topics">
-            <td><a href="#/sessions/{{topics.id}}">{{topics.brands.name}}</a></td>
+            <td>{{topics.brands.name}}</td>
             <td>{{topics.members[0].firstName}} {{topics.members[0].lastName}}</td>
             <td>{{topics.text}}</td>
             <td>{{topics.endDate | limitTo: 10}}</td>

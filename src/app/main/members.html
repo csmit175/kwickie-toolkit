@@ -1,0 +1,55 @@
+<div class="container">
+
+  <div>
+    <nav class="top-bar row">
+      <ul class="title-area">
+        <li class="name">
+          <h1>
+            <a>Members</a>
+          </h1>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  <br>
+  <div class="row">
+
+  <div class="large-2 columns">
+    <ul class="side-nav">
+      <li><a href="#/">Sessions</a></li>
+      <li><a href="#/members">Members</a></li>
+      <li><a href="#/kwickies">Kwickies</a></li>
+      <li><a href="#/brands">Brands</a></li>
+    </ul>
+  </div>
+
+  <div class="large-10 columns">
+
+      <table style="width: 100%;">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Celeb</th>
+            <th>Created</th>
+            <th>Featured</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="members in members">
+
+            <td><a href="#/members/{{members.id}}">{{members.id}}</a></td>
+            <td>{{members.firstName}}</td>
+            <td>{{members.lastName}}</td>
+            <td>{{members.celebVerified}}</td>
+            <td>{{members.created | limitTo: 10}}</td>
+            <td>{{members.featured}}</td>
+
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+</div>

@@ -2,6 +2,6 @@
   'use strict';
 
   angular
-    .module('kwickieToolkit', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'toastr']);
+    .module('kwickieToolkit', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngMessages', 'ngAria', 'ngResource', 'ngRoute', 'mm.foundation']);
 
 })();

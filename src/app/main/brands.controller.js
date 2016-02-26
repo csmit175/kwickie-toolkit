@@ -3,12 +3,12 @@
 
   angular
     .module('kwickieToolkit')
-    .controller('MainController', MainController);
+    .controller('BrandsController', BrandsController);
 
   /** @ngInject */
-  function MainController($scope, dataService, $routeParams) {
+  function BrandsController($scope, dataService) {
     $scope.topics = "null";
-    dataService.getTopics().then(function(response) {
+    dataService.getBrands().then(function(response) {
         $scope.topics = response.data;
     });
   }

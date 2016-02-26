@@ -45,8 +45,8 @@
         "module": null
       },
       "foundationComponents": {
-        "key": "noFoundationComponents",
-        "module": null
+        "key": "angular-foundation",
+        "module": "mm.foundation"
       },
       "cssPreprocessor": {
         "key": "node-sass",
