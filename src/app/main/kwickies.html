@@ -25,11 +25,28 @@
 
   <div class="large-10 columns">
 
+    <form ng-submit="submit()">
+
+    <select>
+      <option value="true">answered</option>
+      <option value="false">asked</option>
+    </select>
+
+    <div class="row">
+
+      <div class="large-6 columns">
+        <input class="button extended" type="submit" id="submit" value="Submit" />
+      </div>
+
+    </div>
+
+    </form>
+
       <table style="width: 100%;">
         <thead>
           <tr>
-            <th>Question ID</th>
-            <th>Answer ID</th>
+            <th>Question Video ID</th>
+            <th>Answer Video ID</th>
             <th>Kwickie Video ID</th>
             <th>Publish Date</th>
             <th>Created Date</th>
@@ -39,12 +56,12 @@
         </thead>
         <tbody>
           <tr ng-repeat="kwickies in kwickies">
-            <td>{{kwickies.name}}</td>
-            <td>{{topics.members[0].firstName}} {{topics.members[0].lastName}}</td>
-            <td>{{topics.text}}</td>
-            <td>{{topics.endDate | limitTo: 10}}</td>
-            <td>{{topics.featured}}</td>
-            <td>{{kwickies.name}}</td>
+            <td>{{kwickies.questionVideoId}}</td>
+            <td>{{kwickies.answerVideoId}}</td>
+            <td>{{kwickies.kwickieVideoId}}</td>
+            <td>{{kwickies.publishDate | limitTo: 10}}</td>
+            <td>{{kwickies.createdDate}}</td>
+            <td>{{kwickies.status}}</td>
             <td>{{kwickies.featured}}</td>
           </tr>
         </tbody>

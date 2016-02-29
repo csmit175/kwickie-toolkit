@@ -17,6 +17,12 @@ $topbar-bg-color: #5AADBB;
 // bower:scss
 // endbower
 
+.row {
+    margin: 0 auto;
+    max-width: 100% !important;
+    width: 100%;
+}
+
 .browsehappy {
   margin: 0.2em 0;
   background: #ccc;

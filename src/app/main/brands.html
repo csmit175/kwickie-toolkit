@@ -28,20 +28,14 @@
       <table style="width: 100%;">
         <thead>
           <tr>
-            <th>Brand</th>
-            <th>Member</th>
-            <th>Title</th>
-            <th>End Date</th>
-            <th>Featured</th>
+            <th>ID</th>
+            <th>Brand Name</th>
           </tr>
         </thead>
         <tbody>
           <tr ng-repeat="topics in topics">
-            <td>{{topics.brands.name}}</td>
-            <td>{{topics.members[0].firstName}} {{topics.members[0].lastName}}</td>
-            <td>{{topics.text}}</td>
-            <td>{{topics.endDate | limitTo: 10}}</td>
-            <td>{{topics.featured}}</td>
+            <td><a href="#/brands/{{topics.id}}">{{topics.id}}</a></td>
+            <td>{{topics.name}}</td>
           </tr>
         </tbody>
       </table>

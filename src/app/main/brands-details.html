@@ -25,7 +25,79 @@
 
   <div class="large-10 columns">
 
-      
+    <form ng-submit="submit()">
+    <div class="row">
+
+      <div class="large-12 columns">
+        <label>Brand Name
+          <input type="text" placeholder="Brand Name" name="BrandName" id="BrandName" ng-model="formDetails.BrandName"/>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="large-12 columns">
+        <label>Logo URL
+          <input type="text" placeholder="Logo URL" name="LogoUrl" id="LogoUrl" ng-model="formDetails.LogoUrl"/>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="large-12 columns">
+        <label>Web URL
+          <input type="text" placeholder="Web URl" name="WebUrl" id="WebUrl" ng-model="formDetails.WebUrl"/>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <div class="large-12 columns">
+        <label>Color (Hex Value)
+          <input type="text" placeholder="Color" name="Color" id="Color" ng-model="formDetails.Color"/>
+        </label>
+      </div>
+
+    </div>
+
+    <div class="row">
+
+      <!--<div class="large-12 columns">
+        <label>Brand Cover Image
+          <input type="text" placeholder="Brand Cover Image" name="BrandCoverImage" id="BrandCoverImage" ng-model="formDetails.BrandCoverImage"/>
+        </label>
+      </div>-->
+
+    </div>
+
+    <div class="row">
+
+      <!--<div class="large-12 columns">
+        <label>BMC Invite Link
+          <input type="text" placeholder="BMC Invite Link" name="BMCInviteLink" id="BMCInviteLink" ng-model="formDetails.BMCInviteLink"/>
+        </label>
+      </div>-->
+
+    </div>
+
+
+
+    <div class="row">
+
+      <div class="large-6 columns">
+        <input class="button extended" type="submit" id="submit" value="Submit" />
+      </div>
+
+    </div>
+
+  </form>
+
     </div>
   </div>
 

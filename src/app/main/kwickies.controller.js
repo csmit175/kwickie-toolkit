@@ -7,9 +7,14 @@
 
   /** @ngInject */
   function KwickiesController($scope, dataService) {
-    $scope.topics = "null";
-    dataService.getKwickies().then(function(response) {
-        $scope.kwickies = response.data;
-    });
+
+    $scope.submit = function() {
+
+      $scope.topics = "null";
+      dataService.getKwickies().then(function(response) {
+          $scope.kwickies = response.data;
+      });
+
+    }
   }
 })();
