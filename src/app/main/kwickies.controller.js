@@ -6,15 +6,21 @@
     .controller('KwickiesController', KwickiesController);
 
   /** @ngInject */
-  function KwickiesController($scope, dataService) {
+  function KwickiesController($scope, $http) {
 
     $scope.submit = function() {
 
-      $scope.topics = "null";
-      dataService.getKwickies().then(function(response) {
-          $scope.kwickies = response.data;
+      $scope.list = this.formDetails;
+
+      console.log($scope.list);
+
+      $http.get('https://bigdev.kwickie.com/api/kwickies' + '?filter=' + '%7B%22where%22%3A%7B%22answered%22%3A%22' + $scope.list.answered + '%22%7D%7D').success(function(data) {
+
+        $scope.kwickies = data;
+
       });
 
-    }
+    };
+
   }
 })();

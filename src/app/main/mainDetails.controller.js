@@ -16,7 +16,7 @@
 
       $scope.formDetails = {
           'BrandId': data.brandId,
-          //'Member': data.members.firstName,
+          'MemberId': data.memberId,
           'Title': data.text,
           'Description': data.description,
           'StartDate': data.startDate,
@@ -27,6 +27,12 @@
           //'KwickiesAutoApproved': data.answerAutoApproved,
           'Featured': data.featured
       };
+
+      $http.get('https://bigdev.kwickie.com/api/Brands/' + '?filter=' + '%7B%22where%22%3A%7B%22id%22%3A%22' + $scope.formDetails.BrandId + '%22%7D%7D').success(function(data) {
+
+        $scope.brandsDetails = data;
+
+      });
 
     });
 
